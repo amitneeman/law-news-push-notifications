@@ -24,6 +24,7 @@ router.get('/rssTest',async (req,res,next) => {
     res.json(feed);
 })
 
+
 router.get('/send/:title/:body',async (req,res,next) => {
     let tokens = await pushSender.sendNotification(req.params.title,req.params.body,{});
     res.json(tokens);
